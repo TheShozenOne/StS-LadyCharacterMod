@@ -2,7 +2,7 @@ package ladycharacter;
 
 import basemod.BaseMod;
 import basemod.interfaces.*;
-import ladycharacter.character.MyCharacter;
+import ladycharacter.character.Lady;
 import ladycharacter.util.GeneralUtils;
 import ladycharacter.util.KeywordInfo;
 import ladycharacter.util.Sounds;
@@ -52,7 +52,7 @@ public class LadyMod implements
     public static void initialize() {
         new LadyMod();
 
-        MyCharacter.Meta.registerColor();
+        Lady.Meta.registerColor();
     }
 
     public LadyMod() {
@@ -161,7 +161,7 @@ public class LadyMod implements
 
     @Override
     public void receiveEditCharacters() {
-        MyCharacter.Meta.registerCharacter();
+        Lady.Meta.registerCharacter();
     }
 
     @Override

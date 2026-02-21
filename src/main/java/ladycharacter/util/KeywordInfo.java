@@ -1,4 +1,4 @@
-package basicmod.util;
+package ladycharacter.util;
 
 import basemod.helpers.KeywordColorInfo;
 

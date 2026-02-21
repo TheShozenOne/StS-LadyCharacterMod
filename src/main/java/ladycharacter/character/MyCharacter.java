@@ -1,4 +1,4 @@
-package basicmod.character;
+package ladycharacter.character;
 
 import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
@@ -25,8 +25,8 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import java.util.ArrayList;
 
-import static basicmod.BasicMod.characterPath;
-import static basicmod.BasicMod.makeID;
+import static ladycharacter.LadyMod.characterPath;
+import static ladycharacter.LadyMod.makeID;
 
 public class MyCharacter extends CustomPlayer {
     //Stats

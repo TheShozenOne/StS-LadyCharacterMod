@@ -1,7 +1,9 @@
 package ladycharacter;
 
+import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
+import ladycharacter.cards.BaseCard;
 import ladycharacter.character.Lady;
 import ladycharacter.util.GeneralUtils;
 import ladycharacter.util.KeywordInfo;
@@ -31,6 +33,7 @@ import java.util.*;
 
 @SpireInitializer
 public class LadyMod implements
+        EditCardsSubscriber,
         EditCharactersSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
@@ -162,6 +165,14 @@ public class LadyMod implements
     @Override
     public void receiveEditCharacters() {
         Lady.Meta.registerCharacter();
+    }
+
+    @Override
+    public void receiveEditCards() {
+        new AutoAdd(modID) //Loads files from this mod
+                .packageFilter(BaseCard.class) //In the same package as this class
+                .setDefaultSeen(true) //And marks them as seen in the compendium
+                .cards(); //Adds the cards
     }
 
     @Override

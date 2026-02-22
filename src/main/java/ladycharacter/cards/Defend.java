@@ -15,6 +15,7 @@ public class Defend extends BaseCard {
             CardRarity.BASIC,
             CardTarget.SELF,
             1
+
     );
 
     private static final int BLOCK = 5;

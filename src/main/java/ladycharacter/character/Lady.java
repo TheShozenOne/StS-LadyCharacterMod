@@ -46,10 +46,10 @@ public class Lady extends CustomPlayer {
         //These are used to identify your character, as well as your character's card color.
         //Library color is basically the same as card color, but you need both because that's how the game was made.
         @SpireEnum
-        public static PlayerClass YOUR_CHARACTER;
-        @SpireEnum(name = "CHARACTER_GRAY_COLOR") // These two MUST match. Change it to something unique for your character.
+        public static PlayerClass LADY;
+        @SpireEnum(name = "LADY_WHITE_COLOR") // These two MUST match. Change it to something unique for your character.
         public static AbstractCard.CardColor CARD_COLOR;
-        @SpireEnum(name = "CHARACTER_GRAY_COLOR") @SuppressWarnings("unused")
+        @SpireEnum(name = "LADY_WHITE_COLOR") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
 
         //Character select images
@@ -68,7 +68,7 @@ public class Lady extends CustomPlayer {
         private static final String SMALL_ORB = characterPath("cardback/small_orb.png");
 
         //This is used to color *some* images, but NOT the actual cards. For that, edit the images in the cardback folder!
-        private static final Color cardColor = new Color(128f/255f, 128f/255f, 128f/255f, 1f);
+        private static final Color cardColor = new Color(236F, 205F, 162F, 0.8F);
 
         //Methods that will be used in the main mod file
         public static void registerColor() {
@@ -117,7 +117,7 @@ public class Lady extends CustomPlayer {
     //Actual character class code below this point
 
     public Lady() {
-        super(getNames()[0], Meta.YOUR_CHARACTER,
+        super(getNames()[0], Meta.LADY,
                 new CustomEnergyOrb(orbTextures, characterPath("energyorb/vfx.png"), layerSpeeds), //Energy Orb
                 new SpriterAnimation(characterPath("animation/default.scml"))); //Animation
 
